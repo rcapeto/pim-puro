@@ -3,13 +3,13 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [TypeScript](https://www.typescriptlang.org/)
-- [HTML]
-- [CSS]
-- [SASS]
-- [JavaScript]
-- [EJS]
-- [Node.js]
-- [MSSQL]
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://www.w3schools.com/cssref/)
+- [SASS](https://sass-lang.com)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [EJS](https://ejs.co/)
+- [Node.js](https://nodejs.org/)
+- [MSSQL](https://docs.microsoft.com/pt-br/sql/?view=sql-server-ver15)
 
 ## 🚀 Como executar
 
@@ -41,16 +41,9 @@ Você pode visualizar o layout do projeto através do link abaixo:
 
 Lembrando que você precisa ter uma conta no [Figma](http://figma.com/).
 
-Feito com 💜 by Raphael Capeto 
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+## 👨🏻‍💻 Integrantes
+- Raphael Capeto
+- Arthur Rosa
+- Herbert 
+
+Feito com 💜 by Raphael Capeto
