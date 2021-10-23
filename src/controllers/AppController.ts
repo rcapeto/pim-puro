@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 
 export default { 
    async index(request: Request, response: Response) {
-      return response.json({ message: 'Success!' });
+      const teste = 'salve';
+      return response.render('index', { teste });
    },
 }
