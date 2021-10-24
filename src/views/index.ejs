@@ -8,6 +8,27 @@
    <%- include('parts/links', { title: 'HAR Hotel' }) %>
 </head>
 <body>
-   <h1>aqui {{teste}}</h1>
+   <%- include('parts/header', { image }) %>
+   <div class="container">
+      <div class="info">
+         <p>Todos os quartos estão inclusos o nosso perfeito café da manha.</p>
+      </div>
+      <div class="rooms">
+         <% rooms.forEach(room => { %>
+            <div class="room">
+               <div class="content">
+                  <h2><%=room.name%></h2>
+                  <p><%=room.description%></p>
+                  <a href="/quartos/<%=room.id%>">EXPLORE</a>
+               </div>
+               <div class="image">
+                  <img src="<%=room.image%>" alt="<%=room.name%>">
+               </div>
+            </div>
+         <% }) %>
+      </div>
+      <%- include('parts/comments', { comments }) %>
+   </div>
+   <%- include('parts/footer') %>
 </body>
 </html>

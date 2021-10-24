@@ -17,12 +17,18 @@ body {
    height: 100vh;
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
-   background-color: #E5E5E5;
+   background-color: var(--white);
    max-width: 100vw;
 }
 
 .font-n {
    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+   width: 100%;
+   max-width: 1280px;
+   margin: 0 auto;
 }
 
 button {

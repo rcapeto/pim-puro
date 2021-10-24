@@ -1,0 +1,17 @@
+<div class="comments-container">
+   <h2>Comentários</h2>
+
+   <div class="comments">
+      <% comments.forEach((comment, index) => { %>
+         <div class="comment" data-comment="<%=index%>" data-id="<%=comment.id%>">
+            <p>"<%=comment.text%>"</p>
+            <span><%=comment.user%></span>
+         </div>
+      <% })%>
+
+      <div class="navigation">
+         <button data-button-prev><</button>
+         <button data-button-next>></button>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,124 @@
+.header-container {
+   height: 100vh;
+   background-size: 100% 100%;
+   position: relative;
+}
+
+.overlay {
+   background-color: rgba(0, 0, 0, 0.4);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+
+   nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 20px;
+
+      @media(max-width: 440px) {
+         justify-content: center;
+      }
+      
+      ul {
+         list-style: none;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+
+         li {
+            a {
+               font-weight: 200;
+               font-size: 16px;
+               color: #fff;
+               text-decoration: none;
+               transition: all ease .6s;
+               position: relative;
+
+               @media(max-width: 440px) {
+                  font-size: 14px;
+               }
+
+               &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: -3px;
+                  left: 0;
+                  width: 0%;
+                  background-color: var(--white);
+                  height: 3px;
+               }
+      
+               &:hover::after,
+               &.active::after {
+                  width: 100%;
+                  transition: all ease .6s;
+               }
+            }
+         }
+      }
+   }
+
+   .content {
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: #fff;
+      margin-left: 60px;
+
+      @media (max-width: 440px) {
+         width: 100%;
+         margin-left: 0;
+         align-items: center;
+         justify-content: center;
+         padding: 10px;
+         max-width: unset;
+      }
+
+      h2 {
+         font-size: 30px;
+
+         @media (max-width: 440px) {
+            font-size: 22px;
+         }
+      }
+      h1 {
+         @media (max-width: 440px) {
+            font-size: 26px;
+         }
+      }
+   }
+
+   .scroll {
+      max-width: 100px;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+
+      p {
+         color: #fff;
+         font-size: 16px;
+         font-weight: 200;
+      }
+
+      div {
+         width: 20px;
+         height: 20px;
+         color: var(--black);
+         background-color: var(--white);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         font-size: 10px;
+      }
+   }
+}
