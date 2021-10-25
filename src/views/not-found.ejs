@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/styles/not-found.css">
+   <%- include('parts/links', { title: 'HAR Hotel - Error' }) %>
+</head>
+<body>
+   <div class="container not-found-page">
+      <h2>Ops... ocorreu um erro</h2>
+      <p><%=message%></p>
+      <a href="/">
+         Voltar ao início
+      </a>
+   </div>
+</body>
+</html>

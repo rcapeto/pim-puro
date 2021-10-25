@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/styles/installations.css">
+   <%- include('parts/links', { title: 'HAR Hotel - Instalações' }) %>
+</head>
+<body>
+   <%- include('parts/header', { image }) %>
+   <div class="container installation-page">
+      <h1>Instalações</h1>
+      <p>
+         Queremos que a sua estadia no nosso luxuoso hotel seja verdadeiramente inesquecível. 
+         É por isso que damos atenção especial a todas as suas necessidades para que podemos 
+         garantir uma experiência bastante única. Os hotéis de luxo oferecem o cenário perfeito 
+         com vistas deslumbrantes para o lazer e nossas modernas instalações de resort de luxo o 
+         ajudarão a aproveitar o melhor de todos.
+      </p>
+
+      <div class="installations">
+         <%installations.forEach(installation => { %>
+            <div class="installation">
+               <img src="<%=installation.image%>" alt="<%=installation.name%>">
+               <div class="name">
+                  <span><%=installation.name%></span>
+               </div>
+            </div>
+         <%})%>
+      </div>
+      
+      <%- include('parts/comments', { comments }) %>
+   </div>
+   <%- include('parts/footer') %>
+</body>
+</html>

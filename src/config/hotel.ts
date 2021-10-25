@@ -34,12 +34,14 @@ export const installations: Installation[] = [
 
 export const homeRooms: Room[] = [
    {
+      price: 800,
       name: 'Suíte de Casal',
       id: 1,
       description: 'Uma bela suíte com uma aconchegante cama de casal, aonde tem uma linda vista e um maravilhoso espaço.',
       image: 'https://images.unsplash.com/photo-1568495248636-6432b97bd949?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80'
    },
    {
+      price: 250,
       name: 'Suíte Amigável',
       description: 'Para você viajar com um amigo e poder relaxar da melhor maneira se acomodando em camas de solteiro separadas.',
       id: 2,

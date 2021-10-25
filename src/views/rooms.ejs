@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/styles/rooms.css">
+   <%- include('parts/links', { title: 'HAR Hotel - Quartos' }) %>
+</head>
+<body>
+   <%- include('parts/header', { image }) %>
+   <div class="container rooms-page">
+      <h1>Quartos</h1>
+      <p>
+         Cada um dos nossos quartos luminosos e inundados de luz vêm com tudo que você poderia 
+         precisar para uma estadia confortável. E sim, o conforto não é o nosso único objetivo, 
+         também valorizamos um bom design, mobiliário contemporâneo elegante complementado
+         pelos tons ricos da paleta da natureza, visíveis a partir das janelas com vista para o mar 
+         e terraços de nossos quartos.
+      </p>
+
+      <div class="rooms">
+         <%rooms.forEach(room => { %>
+            <div class="room">
+               <div class="image">
+                  <img src="<%=room.image%>" alt="<%=room.name%>">
+                  <p><%=room.name%></p>
+               </div>
+               <div class="info">
+                  <a href="/quartos/<%=room.id%>">
+                     <span>+</span>
+                     Mais detalhes
+                  </a>
+
+                  <div class="price">
+                     <%=room.price%> por noite
+                  </div>
+               </div>
+            </div>
+         <%})%>
+      </div>
+      
+      <%- include('parts/comments', { comments }) %>
+   </div>
+   <%- include('parts/footer') %>
+</body>
+</html>

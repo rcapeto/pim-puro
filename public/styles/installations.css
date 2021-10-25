@@ -1,0 +1,82 @@
+.installation-page {
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.installation-page h1 {
+  color: var(--title);
+  font-size: 28px;
+  text-align: center;
+}
+.installation-page p {
+  color: var(--black);
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 540px) {
+  .installation-page p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.installation-page .installations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+.installation-page .installations .installation {
+  height: 720px;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 540px) {
+  .installation-page .installations .installation {
+    height: 400px;
+  }
+}
+@media (max-width: 440px) {
+  .installation-page .installations .installation {
+    height: 250px;
+  }
+}
+.installation-page .installations .installation img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.installation-page .installations .installation .name {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.installation-page .installations .installation .name span {
+  background-color: var(--white);
+  text-transform: uppercase;
+  font-size: 25px;
+  color: var(--title);
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 10px;
+}
+@media (max-width: 540px) {
+  .installation-page .installations .installation .name span {
+    font-size: 18px;
+  }
+}
+@media (max-width: 440px) {
+  .installation-page .installations .installation .name span {
+    font-size: 14px;
+  }
+}

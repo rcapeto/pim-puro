@@ -8,6 +8,7 @@ export interface Room {
    id: number;
    description: string;
    image: string;
+   price: number;
 };
 
 export interface Comment {

@@ -1,5 +1,4 @@
 footer {
-  margin-top: 30px;
   background-color: var(--black);
   display: flex;
   align-items: center;
@@ -7,16 +6,20 @@ footer {
   position: relative;
   padding: 30px;
 }
-footer::after {
-  content: "";
-  height: 50px;
+footer .top {
   position: absolute;
-  top: -16px;
-  left: 48%;
-  width: 50px;
-  transform: rotate(45deg);
-  background-color: var(--black);
+  width: 100%;
+  top: -10px;
   z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .top .square {
+  width: 45px;
+  height: 45px;
+  background-color: var(--black);
+  transform: rotate(45deg);
 }
 footer .content {
   display: flex;
