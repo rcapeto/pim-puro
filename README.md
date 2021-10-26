@@ -29,6 +29,8 @@ $ yarn start
 ```
 O app estará disponível no seu browser pelo endereço http://localhost:3333.
 
+*Necessário MS SQL Server instalado em sua máquina.
+
 ## 💻 Projeto
 
 HAR Hotel é um projeto para reserva de hotéis.
