@@ -1,0 +1,204 @@
+.contact-page header {
+  background-color: var(--black);
+  height: 360px;
+}
+.contact-page header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px;
+}
+@media (max-width: 440px) {
+  .contact-page header nav {
+    justify-content: center;
+  }
+}
+.contact-page header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contact-page header nav ul li a {
+  font-weight: 200;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: all ease 0.6s;
+  position: relative;
+}
+@media (max-width: 440px) {
+  .contact-page header nav ul li a {
+    font-size: 14px;
+  }
+}
+.contact-page header nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  background-color: var(--white);
+  height: 3px;
+}
+.contact-page header nav ul li a:hover::after, .contact-page header nav ul li a.active::after {
+  width: 100%;
+  transition: all ease 0.6s;
+}
+.contact-page header .main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.contact-page header .main-title h1 {
+  font-size: 42px;
+  line-height: 52px;
+  color: var(--white);
+}
+@media (max-width: 440px) {
+  .contact-page header .main-title h1 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+.contact-page .content {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 10px;
+}
+.contact-page .content .top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .contact-page .content .top {
+    gap: 20px;
+  }
+}
+.contact-page .content .top h2 {
+  color: var(--title);
+  font-size: 24px;
+  line-height: 34px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+@media (max-width: 440px) {
+  .contact-page .content .top h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.contact-page .content .top p {
+  color: var(--blue);
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+}
+@media (max-width: 440px) {
+  .contact-page .content .top p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.contact-page .content .form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .contact-page .content .form-container {
+    flex-direction: column;
+    justify-content: unset;
+    width: 100%;
+    gap: 20px;
+  }
+}
+.contact-page .content .form-container .left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media (max-width: 768px) {
+  .contact-page .content .form-container .left {
+    width: 100%;
+  }
+}
+.contact-page .content .form-container .left .logo h3 {
+  font-size: 18px;
+  color: var(--title);
+  font-weight: 200;
+}
+.contact-page .content .form-container .left p {
+  color: var(--blue);
+  font-size: 16px;
+  line-height: 26px;
+}
+.contact-page .content .form-container .form {
+  width: 35%;
+}
+@media (max-width: 768px) {
+  .contact-page .content .form-container .form {
+    width: 100%;
+  }
+}
+.contact-page .content .form-container .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-page .content .form-container .form form .input-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-page .content .form-container .form form .input-block label {
+  font-size: 16px;
+  color: var(--title);
+  line-height: 26px;
+}
+.contact-page .content .form-container .form form .input-block input {
+  width: 100%;
+  border: 1px solid var(--title);
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--black);
+}
+.contact-page .content .form-container .form form .input-block textarea {
+  width: 100%;
+  border: 1px solid var(--title);
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--black);
+  resize: none;
+  height: 200px;
+}
+.contact-page .content .form-container .form form button {
+  color: var(--white);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin-left: auto;
+  background-color: var(--black);
+  transition: opacity 0.6s ease;
+}
+.contact-page .content .form-container .form form button:hover {
+  opacity: 0.6;
+}
+@media (max-width: 768px) {
+  .contact-page .content .form-container .form form button {
+    width: 100%;
+  }
+}

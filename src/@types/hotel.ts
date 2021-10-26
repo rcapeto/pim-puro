@@ -22,4 +22,17 @@ export interface Comment {
 export interface Error {
    field: string;
    message: string;
+   messageTranslated: string;
+   filedTranslated: string;
 };
+
+export type Field = 
+   'name' |
+   'birth_date' |
+   'enter_date' |
+   'exit_date' |
+   'adult_number' |
+   'children_number' |
+   'address' |
+   'cellphone' |
+   string

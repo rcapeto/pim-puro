@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/styles/alert.css">
+   <%- include('parts/links', { title: 'Erro no cadastro' }) %>
+</head>
+<body>
+   <div class="container page-alert">
+      <div class="alert-container">
+         <header>
+            <h1 class="error">Erro</h1>
+            <p>❌</p>
+         </header>
+
+         <div class="errors">
+            <%errors.forEach(error => { %>
+               <div 
+                  data-error="<%=error.message%>"
+                  data-field-error="<%=error.field%>"
+                  data-error-message-pt="<%=error.messageTranslated%>"
+                  class="error"
+               >
+                  <p>Por favor preencha o campo: <span><%=error.filedTranslated%></span></p>
+               </div>
+            <% })%>
+         </div>
+
+         <div class="go-back">
+            <a href="/quartos/<%=roomId%>">
+               <span>←</span>
+               Voltar
+            </a>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

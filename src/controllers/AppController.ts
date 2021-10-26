@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import { images, homeRooms, comments, installations } from '../config/hotel';
 import { Error } from '../@types/hotel';
-import { formatPrice } from  '../utils';
+import { formatPrice, translateField, titleAllString } from  '../utils';
 
 export default { 
    async index(request: Request, response: Response) {
@@ -40,21 +40,46 @@ export default {
    },
    async registerReservation(request: Request, response: Response) {
       const data = request.body;
-      let hasEmptyField = false;
+      const roomId = data['room_id'];
       const errors: Error[] = [];
 
+      let hasEmptyField = false;
 
       Object.keys(data).forEach(key => {
          if(!data[key]) {
             hasEmptyField = true;
-            errors.push({ field: key, message: `Please fill the field: ${key}`});
+            const field_pt = titleAllString(translateField(key));
 
+            errors.push({ 
+               field: key, 
+               message: `Please fill the field: ${key}`,
+               messageTranslated: `Por favor preencha o campo: ${field_pt}`,
+               filedTranslated: field_pt
+            });
          }
       });
-      console.log('data', data);
-      return response.json({ data, hasEmptyField, errors });
+
+      if(!hasEmptyField) {
+         const removeSymbols = ['cep', 'cpf', 'cellphone'];
+         const dates = ['birth_date', 'enter_date', 'exit_date'];
+
+         Object.keys(data).forEach(key => {
+            removeSymbols.includes(key) && (
+               data[key] = data[key].replace(/\D/g, '')
+            );
+
+            dates.includes(key) && (
+               data[key] = new Date(data[key])
+            );
+         });
+
+         const register_id = Date.now();
+
+         return response.render('success', { roomId, registerId: register_id });
+      }
+      return response.render('error', { errors, roomId });
+   },
+   async contact(request: Request, response: Response) {
+      return response.render('contact');
    }
 }
-
-//página de erro
-//cadastro de uma reserva

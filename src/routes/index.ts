@@ -8,6 +8,8 @@ route.get('/', AppController.index);
 route.get('/instalacoes', AppController.installations);
 route.get('/quartos', AppController.rooms);
 route.get('/quartos/:id', AppController.room);
+route.get('/contato', AppController.contact);
+
 route.post('/reservation', AppController.registerReservation);
 
 export { route };

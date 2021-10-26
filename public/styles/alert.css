@@ -1,0 +1,121 @@
+.page-alert.container {
+  max-width: 600px;
+  margin: auto;
+  height: 100%;
+}
+.page-alert .alert-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+.page-alert .alert-container header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.page-alert .alert-container header h1 {
+  font-size: 36px;
+  line-height: 34px;
+  font-weight: 200;
+}
+@media (max-width: 440px) {
+  .page-alert .alert-container header h1 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+.page-alert .alert-container header h1.error {
+  color: var(--red);
+}
+.page-alert .alert-container header h1.success {
+  color: var(--green);
+}
+.page-alert .alert-container h2 {
+  font-size: 26px;
+  line-height: 36px;
+  color: var(--blue);
+  font-weight: 200;
+}
+@media (max-width: 440px) {
+  .page-alert .alert-container h2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.page-alert .alert-container .register-number {
+  color: var(--blue);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 200;
+}
+@media (max-width: 440px) {
+  .page-alert .alert-container .register-number {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .page-alert .alert-container .register-number span {
+    font-size: 18px;
+  }
+}
+.page-alert .alert-container .register-number span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.page-alert .alert-container .errors .error {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.page-alert .alert-container .errors .error p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 200;
+  color: var(--blue);
+}
+@media (max-width: 440px) {
+  .page-alert .alert-container .errors .error p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.page-alert .alert-container .errors .error p span {
+  color: var(--red);
+  font-weight: bold;
+}
+.page-alert .alert-container .go-back a {
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 230px;
+  margin: 0 auto;
+  color: var(--white);
+  background-color: var(--black);
+  border: 0;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: opacity 0.6s ease;
+}
+.page-alert .alert-container .go-back a span {
+  font-size: 18px;
+}
+.page-alert .alert-container .go-back a:hover {
+  opacity: 0.6;
+}
+@media (max-width: 440px) {
+  .page-alert .alert-container .go-back a {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .page-alert .alert-container .go-back a span {
+    font-size: 14px;
+  }
+}
