@@ -9,6 +9,8 @@ export interface Room {
    description: string;
    image: string;
    price: number;
+   images: {url: string;}[];
+   infos: string[];
 };
 
 export interface Comment {
@@ -16,3 +18,8 @@ export interface Comment {
    id: number;
    text: string;
 }
+
+export interface Error {
+   field: string;
+   message: string;
+};

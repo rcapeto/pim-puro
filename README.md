@@ -37,7 +37,7 @@ HAR Hotel é um projeto para reserva de hotéis.
 
 Você pode visualizar o layout do projeto através do link abaixo:
 
-- [Layout Web](https://www.figma.com/file/wPoXn7fP5P75eqEQu2qvpr/Hotel-Website-Design-(Community)?node-id=0%3A1) 
+- [Layout](https://www.figma.com/file/wPoXn7fP5P75eqEQu2qvpr/Hotel-Website-Design-(Community)?node-id=0%3A1) 
 
 Lembrando que você precisa ter uma conta no [Figma](http://figma.com/).
 

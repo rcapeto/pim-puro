@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 
 import { images, homeRooms, comments, installations } from '../config/hotel';
+import { Error } from '../@types/hotel';
 import { formatPrice } from  '../utils';
 
 export default { 
@@ -31,6 +32,29 @@ export default {
 
       const formatedRoom = Object.assign(room, { price: formatPrice(room.price) });
 
-      return response.render('room', { room: formatedRoom });
+      return response.render('room', { 
+         room: formatedRoom, 
+         infos: formatedRoom.infos,
+         images: formatedRoom.images
+      });
+   },
+   async registerReservation(request: Request, response: Response) {
+      const data = request.body;
+      let hasEmptyField = false;
+      const errors: Error[] = [];
+
+
+      Object.keys(data).forEach(key => {
+         if(!data[key]) {
+            hasEmptyField = true;
+            errors.push({ field: key, message: `Please fill the field: ${key}`});
+
+         }
+      });
+      console.log('data', data);
+      return response.json({ data, hasEmptyField, errors });
    }
 }
+
+//página de erro
+//cadastro de uma reserva
