@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(route);
 
 //abrir banco
-// openConnection();
+openConnection();
 
 app.listen(port, callback(port));
 
