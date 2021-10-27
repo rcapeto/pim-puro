@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import cors from 'cors';
 
 import { route } from './routes';
 import { serverConfig } from './config/server';
@@ -8,6 +9,7 @@ import { openConnection } from './database/controller';
 const app = express();
 const { port } = serverConfig;
 
+app.use(cors());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
