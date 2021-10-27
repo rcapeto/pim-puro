@@ -25,7 +25,7 @@ Para iniciá-lo, siga os passos abaixo:
 # Instalar as dependências
 $ yarn
 # Iniciar o projeto
-$ yarn start
+$ yarn dev
 ```
 O app estará disponível no seu browser pelo endereço http://localhost:3333.
 
