@@ -207,3 +207,59 @@
     width: 100%;
   }
 }
+.contact-page .modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 0;
+  top: 0;
+  justify-content: center;
+}
+.contact-page .modal-overlay.active {
+  visibility: visible;
+}
+.contact-page .modal-overlay .modal {
+  width: 100%;
+  background-color: var(--white);
+  max-width: 360px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 160px;
+}
+@media (max-width: 360px) {
+  .contact-page .modal-overlay .modal {
+    border-radius: 0;
+  }
+}
+.contact-page .modal-overlay .modal .close-modal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.contact-page .modal-overlay .modal .close-modal button {
+  border: 0;
+  background-color: transparent;
+  font-size: 22px;
+}
+.contact-page .modal-overlay .modal .header {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+}
+.contact-page .modal-overlay .modal .header h2 {
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--blue);
+}
+.contact-page .modal-overlay .modal .modal-content {
+  padding: 0 10px;
+}

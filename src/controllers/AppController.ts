@@ -2,43 +2,18 @@ import { Request, Response } from 'express';
 
 import { images, homeRooms, comments, installations } from '../config/hotel';
 import { Error } from '../@types/hotel';
-import { formatPrice, translateField, titleAllString } from  '../utils';
+import { formatPrice, translateField, titleAllString, createReservationObject } from  '../utils';
+import { handleCreateQuery, execSQLQuery } from '../database/controller';
 
 export default { 
    async index(request: Request, response: Response) {
       const image = images.harHotel;
       return response.render('index', { image, rooms: homeRooms, comments });
    },
-   async installations(request: Request, response: Response) {
-      const image = images.harHotel;
-      return response.render('installations', { installations, image, comments });
+   async contact(request: Request, response: Response) {
+      return response.render('contact');
    },
-   async rooms(request: Request, response: Response) {
-      const image = images.room;
-      const formatRooms = homeRooms.map(room => ({
-         ...room,
-         price: formatPrice(room.price)
-      }));
-      return response.render('rooms', { image, comments, rooms: formatRooms });
-   },
-   async room(request: Request, response: Response) {
-      const { params: { id } } = request;
-      const room = homeRooms.find(room => room.id === +id);
-
-      if(!room) 
-         return response.render('not-found', { 
-            message: `Quarto com o id: ${id} não encontrado, por favor digite um id válido!`
-         });
-
-      const formatedRoom = Object.assign(room, { price: formatPrice(room.price) });
-
-      return response.render('room', { 
-         room: formatedRoom, 
-         infos: formatedRoom.infos,
-         images: formatedRoom.images
-      });
-   },
-   async registerReservation(request: Request, response: Response) {
+   async reservation(request: Request, response: Response) {
       const data = request.body;
       const roomId = data['room_id'];
       const errors: Error[] = [];
@@ -73,13 +48,41 @@ export default {
             );
          });
 
-         const register_id = Date.now();
+         const { register_id, reservation } = createReservationObject(data);
+
+         const query = handleCreateQuery(reservation);
+         execSQLQuery(query);
 
          return response.render('success', { roomId, registerId: register_id });
       }
       return response.render('error', { errors, roomId });
    },
-   async contact(request: Request, response: Response) {
-      return response.render('contact');
+   async sendMessage(request: Request, response: Response) {
+      const data = request.body;
+      const errors: { field: string, message: string }[] = [];
+
+      let hasEmptyField = false;
+
+      Object.keys(data).forEach(key => {
+         if(!data[key]) {
+            hasEmptyField = true;
+
+            errors.push({ 
+               field: key,
+               message: `Please fill the field: ${key}`
+            });
+         }
+      });
+
+      return hasEmptyField ? 
+         response.status(400).json({
+            message: 'Error create message',
+            errors
+         }) : 
+         response.status(201).json({
+            message: 'Success to create message',
+            errors,
+         })
+      ;
    }
 }

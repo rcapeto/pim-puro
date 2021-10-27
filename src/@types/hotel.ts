@@ -36,3 +36,38 @@ export type Field =
    'address' |
    'cellphone' |
    string
+
+export interface Reservation {
+   client: Client;
+   room_id: string;
+   enter_date: string;
+   exit_date: string;
+   adult_number: string;
+   children_number: string;
+   id: string;
+};
+
+interface Client {
+   name: string;
+   cpf: string;
+   birth_date: string;
+   cellphone: string;
+   address: string;
+   cep: string;
+   uf: string;
+};
+
+export interface FrontEndData {
+   room_id: string;
+   enter_date: string;
+   exit_date: string;
+   adult_number: string;
+   children_number: string;
+   name: string;
+   cpf: string;
+   birth_date: string;
+   cellphone: string;
+   address: string;
+   cep: string;
+   uf: string;
+};

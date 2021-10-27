@@ -1,15 +1,18 @@
 import { Router } from 'express';
 
 import AppController from '../controllers/AppController';
+import RoomController from '../controllers/RoomController';
+import InstallationController from '../controllers/InstallationController';
 
 const route = Router();
 
 route.get('/', AppController.index);
-route.get('/instalacoes', AppController.installations);
-route.get('/quartos', AppController.rooms);
-route.get('/quartos/:id', AppController.room);
+route.get('/instalacoes', InstallationController.index);
+route.get('/quartos', RoomController.index);
+route.get('/quartos/:id', RoomController.getRoom);
 route.get('/contato', AppController.contact);
 
-route.post('/reservation', AppController.registerReservation);
+route.post('/reserva', AppController.reservation);
+route.post('/mensagem', AppController.sendMessage);
 
 export { route };

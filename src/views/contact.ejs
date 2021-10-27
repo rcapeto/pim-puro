@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/styles/contact.css">
    <%- include('parts/links', { title: 'HAR Hotel - Contato' }) %>
+   <script src="/scripts/contact.js" defer></script>
 
 </head>
 <body>
@@ -57,7 +58,7 @@
             </div>
 
             <div class="form">
-               <form>
+               <form method="POST">
                   <div class="input-block">
                      <label for="name">Nome</label>
                      <input type="text" id="name" name="name">
@@ -76,7 +77,20 @@
             </div>
          </div>
       </div>
-
+      <div class="modal-overlay" aria-expanded="false">
+         <div class="modal">
+            <div class="close-modal">
+               <button>𝘅</button>
+            </div>
+            <div class="header">
+               <h2 data-modal-title>Sucesso</h2>
+               <p data-modal-icon>✅</p>
+            </div>
+            <div class="modal-content">
+               <p data-modal-message>Mensagem enviada com sucesso</p>
+            </div>
+         </div>
+      </div>
    </div>
    <%- include('parts/footer') %>
 </body>
