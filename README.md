@@ -30,6 +30,8 @@ $ yarn dev
 O app estará disponível no seu browser pelo endereço http://localhost:3333.
 
 *Necessário MS SQL Server instalado em sua máquina.
+*Necessário Node instalado em sua máquina.
+*Necessário gerenciador de pacotes(yarn/npm) instalado em sua máquina.
 
 ## 💻 Projeto
 
