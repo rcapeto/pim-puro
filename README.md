@@ -1,3 +1,8 @@
+## 📜 Requisitos
+- Node instalado na máquina;
+- Gerenciador de pacotes instalado na máquina (npm/yarn);
+- Necessário MS SQL Server instalado em sua máquina.
+
 ## 🧪 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -29,10 +34,6 @@ $ yarn dev
 ```
 O app estará disponível no seu browser pelo endereço http://localhost:3333.
 
-*Necessário MS SQL Server instalado em sua máquina.
-*Necessário Node instalado em sua máquina.
-*Necessário gerenciador de pacotes(yarn/npm) instalado em sua máquina.
-
 ## 💻 Projeto
 
 HAR Hotel é um projeto para reserva de hotéis.
@@ -46,8 +47,8 @@ Você pode visualizar o layout do projeto através do link abaixo:
 Lembrando que você precisa ter uma conta no [Figma](http://figma.com/).
 
 ## 👨🏻‍💻 Integrantes
-- Raphael Capeto
-- Arthur Rosa
-- Herbert 
+- Raphael Capeto RA: F1754D3
+- Arthur Rosa RA: N555DG0
+- Herbert Mesquita RA: N640561
 
-Feito com 💜 by Raphael Capeto
+Feito com 🖤 by HAR Hotel.
